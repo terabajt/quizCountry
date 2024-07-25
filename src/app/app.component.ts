@@ -16,7 +16,7 @@ export class AppComponent {
 	title = 'restCountriesFrontend';
 	countries: Country[] = [];
 	loading = true;
-	mode = 'quiz';
+	mode = 'search';
 
 	constructor(private country: CountriesService) {}
 
