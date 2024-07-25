@@ -1,0 +1,22 @@
+<div class="border rounded mt-10">
+  <h1 class="text-3xl font-bold m-10">Quiz państw</h1>
+  <h2 class="p-5">Wpisz nazwę państwa odpowiadającą fladze, następnie zatwierdź przyciskiem Sprawdź</h2>
+  <div class="grid grid-cols-2 mt-10">
+    <div class="h-20 flex justify-center align-middle">
+      <p class="text-6xl">{{ currentCountry.flag }}</p>
+    </div>
+    <div class="h-20 flex flex-col justify-center align-middle">
+      <div> <input #countryName class="border rounded" type="text" placeholder="Wpisz państwo...">
+      </div>
+      <p>{{ currentCountry.name }}</p>
+    </div>
+  </div>
+  <button (click)="onCheckCountry()" class=" ml-2 text-white p-2
+          bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full
+          text-sm text-center dark:bg-blue-600 dark:hover:bg-blue-700
+          dark:focus:ring-blue-800">Sprawdź</button>
+  <button (click)="onRandomCountry()" class=" ml-2 p-2 mb-2  text-white
+  bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full
+  text-sm text-center  dark:bg-blue-600 dark:hover:bg-blue-700
+  dark:focus:ring-blue-800">Wylosuj ponownie</button>
+</div>
