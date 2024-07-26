@@ -1,27 +1,40 @@
 # RestCountriesFrontend
+This project is deployed at: [https://terabajt.github.io/quizCountry/](https://terabajt.github.io/quizCountry/)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.0.
+## Project Description
+The app allows you to search for countries, sort the results, and has a built-in Quiz, where you can guess countries based on the flag displayed. It demonstrates my ability to build and deploy a modern web application using Angular.
 
-## Development server
+## Requirements
+- Node.js (version 18.1 or later)
+- Angular CLI ( LTS )
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Installation
+1. Clone the repository:
+```bash
+  git clone https://github.com/terabajt/quizCountry.git
+```
+2. Navigate to the project directory:
+```bash
+   cd quizCountry
+```
+3. Install the dependencies:
+```bash
+   npm install
+```
+## Running the Project Locally
 
-## Code scaffolding
+1. Build the project
+```bash
+  ng build
+```
+2. Serve the project:
+```bash
+   ng serve
+```
+3. Open your browser and navigate to http://localhost:4200
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Additional Information
+This project includes automated deployment using GitHub Actions. The workflow file .github/workflows/deploy.yml is configured to deploy the dist/geek-soft-builds/browser directory to GitHub Pages whenever changes are pushed to the main branch.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Contact
+For any questions or issues, please contact me at michalpasynek@gmail.com.
