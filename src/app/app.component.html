@@ -10,39 +10,6 @@
       <label for="quizValue" class="ml-2">Quiz</label>
     </div>
   </fieldset>
-  <ng-container *ngIf="mode === 'search'">
-    <h1 class="text-3xl font-bold m-10">Wyszukiwarka państw</h1>
-    <form class="flex flex-row justify-between">
-      <label for="Nazwa" class="mr-20">
-        <input #name class="border h-7 mt-1 indent-2" type="text" name="name" id="name" placeholder="Nazwa państwa..."
-          (input)="onSearchChange(name.value)">
-      </label>
-      <label for="SortBy">Sortuj po:
-        <select class="border mt-1 " #sort (change)="onSortChange(sort.value)">
-          <option value="ascName">Nazwa a->z</option>
-          <option value="descName">Nazwa z->a</option>
-          <option value="descPopulation">Populacja ↓</option>
-          <option value="ascPopulation">Populacja ↑ </option>
-        </select>
-      </label>
-    </form>
-
-    <div *ngIf="countries.length" class="grid grid-cols-3 gap-4 m-20 p-10">
-      <ng-container *ngFor="let country of countries">
-        <div class="rounded bg-slate-200">
-          <p class="p-5 ">{{country.name}}</p>
-          <p class="p-5 text-6xl">{{country.flag}}</p>
-        </div>
-      </ng-container>
-    </div>
-    <div *ngIf="!countries.length" class="grid grid-cols-1 gap-4 m-5 p-10">
-      <p>Wpisz nazwę państwa w wyszukiwarce</p>
-    </div>
-  </ng-container>
-  <ng-container *ngIf="mode === 'quiz'">
-    <app-quiz-country></app-quiz-country>
-  </ng-container>
-
-
-
+  <app-search-country *ngIf="mode === 'search'"></app-search-country>
+  <app-quiz-country *ngIf="mode === 'quiz'"></app-quiz-country>
 </div>
